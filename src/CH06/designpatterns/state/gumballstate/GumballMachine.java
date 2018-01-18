@@ -5,11 +5,13 @@ package CH06.designpatterns.state.gumballstate;
 // 不用再一个地方统一实现
 public class GumballMachine {
  
+	// concrete states
 	State soldOutState;
 	State noQuarterState;
 	State hasQuarterState;
 	State soldState;
- 
+	
+	// state variable
 	State state = soldOutState;
 	int count = 0;
  
@@ -26,6 +28,7 @@ public class GumballMachine {
 	}
  
 	public void insertQuarter() {
+		// 状态在里面转换
 		state.insertQuarter();
 	}
  

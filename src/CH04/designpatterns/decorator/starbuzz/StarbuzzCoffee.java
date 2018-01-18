@@ -11,7 +11,7 @@ public class StarbuzzCoffee {
 
 		Beverage beverage2 = new HouseBlend();
 		
-		// 加其他香料
+		// 加其他香料，在外层
 		// 这就是为什么大家都extend from Beverage class的原因
 		beverage2 = new Soy(beverage2);
 		beverage2 = new Mocha(beverage2);

@@ -1,11 +1,11 @@
 package CH03.designpatterns.observer.weather;
 
-import java.util.*;
-
 public class WeatherStationHeatIndex {
 
 	public static void main(String[] args) {
 		WeatherData weatherData = new WeatherData();
+		
+		// register in constructor
 		CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
 		StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
 		ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);

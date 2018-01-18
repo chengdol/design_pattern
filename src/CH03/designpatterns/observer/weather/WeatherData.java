@@ -12,6 +12,7 @@ public class WeatherData implements Subject {
 		observers = new ArrayList<Observer>();
 	}
 	
+	// 在observer中被回调了
 	@Override
 	public void registerObserver(Observer o) {
 		observers.add(o);
@@ -24,11 +25,13 @@ public class WeatherData implements Subject {
 			observers.remove(i);
 		}
 	}
+	
 	// how to notify observers
 	@Override
 	public void notifyObservers() {
 		for (int i = 0; i < observers.size(); i++) {
 			Observer observer = (Observer)observers.get(i);
+			// notify
 			observer.update(temperature, humidity, pressure);
 		}
 	}

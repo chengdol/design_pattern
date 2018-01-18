@@ -2,7 +2,8 @@ package CH04.designpatterns.decorator.starbuzz;
 
 
 // will be extended by concrete component or decorator
-// have two concrete component
+// have two concrete components
+
 // HouseBlend
 // Espresso
 
